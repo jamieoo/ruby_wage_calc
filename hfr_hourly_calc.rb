@@ -25,6 +25,10 @@ class Salary_pay < Employee
     self.salary = salary
   end
 
+  def self.security(name)
+    Salary_pay.new(name, 50000.00)
+  end
+
   attr_reader :salary
   def salary=(salary)
     if salary < 0
@@ -48,6 +52,10 @@ class Hourly_pay < Employee
     self.name = name
     self.hourly_pay = hourly_pay
     self.hours_worked = hours_worked
+  end
+
+  def self.cashier(name)
+    Hourly_pay.new(name, 12.50, 40)
   end
 
   attr_reader :hourly_pay
